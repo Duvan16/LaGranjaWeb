@@ -15,6 +15,9 @@ import { MaterialModule } from './material/material.module';
 import { MostrarErroresComponent } from './utilidades/mostrar-errores/mostrar-errores.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
+import { MenuComponent } from './menu/menu/menu.component';
+import { AutorizadoComponent } from './seguridad/autorizado/autorizado.component';
+import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-
     IndiceAlimentacionComponent,
     MostrarErroresComponent,
     ListadoGenericoComponent,
+    MenuComponent,
+    AutorizadoComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

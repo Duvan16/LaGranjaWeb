@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    <span>
+    <a routerLink="" mat-button>
+      <mat-icon>agriculture</mat-icon> La Granja
+    </a>
+  </span>
+    <div>
+        <a mat-button routerLink="reporte/porcinos">
+            <mat-icon>search</mat-icon>Reporte Porcinos</a>
+    </div>
+    <!-- <app-autorizado [rol]="'admin'"> -->
+    <ng-container autorizado>
+        <div>
+            <a mat-button routerLink="alimentos">Alimentos</a>
+        </div>
+        <div>
+            <a mat-button routerLink="razas">Razas</a>
+        </div>
+        <div>
+            <a mat-button routerLink="clientes">Clientes</a>
+        </div>
+        <div>
+            <a mat-button routerLink="porcinos">Porcinos</a>
+        </div>
+    </ng-container>
+    <!-- </app-autorizado> -->
+    <div class="espacio"></div>
+    <app-autorizado>
+        <ng-container autorizado>
+            <span>Hola, {{seguridadService.obtenerCampoJWT('email')}}</span>
+            <a mat-button (click)="seguridadService.logout()">Logout</a>
+        </ng-container>
+        <ng-container noAutorizado>
+            <a mat-button routerLink="login">Login</a>
+            <a mat-button routerLink="registro">Registro</a>
+        </ng-container>
+    </app-autorizado>
+</mat-toolbar>
