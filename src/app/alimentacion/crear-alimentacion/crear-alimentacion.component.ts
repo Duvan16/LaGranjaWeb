@@ -1,15 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { parsearErroresAPI } from 'src/app/utilidades/utilidades';
+import { alimentacionCreacionDTO } from '../alimentacion';
+import { AlimentacionService } from '../alimentacion.service';
 
 @Component({
   selector: 'app-crear-alimentacion',
   templateUrl: './crear-alimentacion.component.html',
-  styleUrls: ['./crear-alimentacion.component.css']
+  styleUrls: ['./crear-alimentacion.component.css'],
 })
-export class CrearAlimentacionComponent implements OnInit {
+export class CrearAlimentacionComponent {
+  errores: string[] = [];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private alimentacionService: AlimentacionService
+  ) {}
 
-  ngOnInit(): void {
+  guardarCambios(alimentacion: alimentacionCreacionDTO) {
+    this.alimentacionService.crear(alimentacion).subscribe(
+      () => {
+        this.router.navigate(['/alimentacion']);
+      },
+      (error: any) => (this.errores = parsearErroresAPI(error))
+    );
   }
-
 }
