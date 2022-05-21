@@ -13,7 +13,7 @@ export class IndiceAlimentacionComponent implements OnInit {
   constructor(private alimentacionService: AlimentacionService) {}
 
   alimentacion: alimentacionDTO[] = [];
-  columnasAMostrar = ['id', 'nombre', 'acciones'];
+  columnasAMostrar = ['id', 'descripcion', 'dosis', 'acciones'];
   cantidadTotalRegistros = 0;
   paginaActual = 1;
   cantidadRegistrosAMostrar = 10;

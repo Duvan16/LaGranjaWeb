@@ -16,8 +16,8 @@ import { MostrarErroresComponent } from './utilidades/mostrar-errores/mostrar-er
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
 import { MenuComponent } from './menu/menu/menu.component';
-import { AutorizadoComponent } from './seguridad/autorizado/autorizado.component';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
+import { AutorizadoComponent } from './Seguridad/autorizado/autorizado.component';
 
 @NgModule({
   declarations: [

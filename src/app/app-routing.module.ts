@@ -8,17 +8,17 @@ import { LandingPageComponent } from './landing-page/landing-page/landing-page.c
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   {
-    path: 'alimentos',
+    path: 'alimentacion',
     component: IndiceAlimentacionComponent,
     // canActivate: [EsAdminGuard],
   },
   {
-    path: 'alimentos/crear',
+    path: 'alimentacion/crear',
     component: CrearAlimentacionComponent,
     // canActivate: [EsAdminGuard],
   },
   {
-    path: 'alimentos/editar/:id',
+    path: 'alimentacion/editar/:id',
     component: EditarAlimentacionComponent,
     // canActivate: [EsAdminGuard],
   },
