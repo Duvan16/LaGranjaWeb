@@ -29,6 +29,12 @@ export class FormularioAlimentacionComponent implements OnInit {
           validators: [Validators.required, Validators.minLength(3)],
         },
       ],
+      dosis: [
+        '',
+        {
+          validators: [Validators.required, Validators.min(1)],
+        },
+      ],
     });
 
     if (this.modelo !== undefined) {
@@ -43,11 +49,22 @@ export class FormularioAlimentacionComponent implements OnInit {
   obtenerErrorCampoDescripcion() {
     var campo = this.form.get('descripcion');
     if (campo?.hasError('required')) {
-      return 'El campo descripcion es requerido';
+      return 'El campo Descripción es requerido';
     }
 
     if (campo?.hasError('minlength')) {
       return 'La longitud mínima es de 3 caracteres';
+    }
+
+    return '';
+  }
+  obtenerErrorCampoDosis() {
+    var campo = this.form.get('dosis');
+    if (campo?.hasError('required')) {
+      return 'El campo Dosis es requerido';
+    }
+    if (campo?.hasError('min')) {
+      return 'El campo Dosis es requerido';
     }
 
     return '';
