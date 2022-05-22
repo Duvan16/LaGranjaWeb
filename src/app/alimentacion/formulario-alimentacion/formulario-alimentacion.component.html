@@ -1,6 +1,6 @@
 <app-mostrar-errores [errores]="errores"></app-mostrar-errores>
 
-<form (submit)="guardarCambios()" [formGroup]="form">
+<form (submit)="onSubmit()" [formGroup]="form">
     <mat-form-field appearance="outline">
         <mat-label>Descripción*</mat-label>
         <input formControlName="descripcion" matInput />
@@ -8,7 +8,7 @@
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Dosis*</mat-label>
-        <input formControlName="dosis" matInput />
+        <input formControlName="dosis" matInput type="number" />
         <mat-error *ngIf="form.invalid">{{ obtenerErrorCampoDosis() }}</mat-error>
     </mat-form-field>
     <div>

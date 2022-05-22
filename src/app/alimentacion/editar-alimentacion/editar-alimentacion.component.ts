@@ -22,18 +22,18 @@ export class EditarAlimentacionComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       this.alimentacionService.obtenerPorId(params['id']).subscribe(
-        (genero) => {
-          console.log(genero);
-          this.modelo = genero;
+        (alimentacion) => {
+          this.modelo = alimentacion;
         },
         () => this.router.navigate(['/alimentacion'])
       );
     });
   }
 
-  guardarCambios(genero: alimentacionCreacionDTO) {
+  guardarCambios(alimentacion: alimentacionCreacionDTO) {
+    console.log('guardar');
     if (this.modelo) {
-      this.alimentacionService.editar(this.modelo.id, genero).subscribe(
+      this.alimentacionService.editar(this.modelo.id, alimentacion).subscribe(
         () => {
           this.router.navigate(['/alimentacion']);
         },

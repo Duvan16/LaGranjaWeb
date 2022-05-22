@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { parsearErroresAPI } from 'src/app/utilidades/utilidades';
-import { alimentacionCreacionDTO } from '../alimentacion';
+import { alimentacionCreacionDTO, alimentacionDTO } from '../alimentacion';
 import { AlimentacionService } from '../alimentacion.service';
 
 @Component({

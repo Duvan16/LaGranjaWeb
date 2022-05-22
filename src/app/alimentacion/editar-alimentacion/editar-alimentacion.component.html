@@ -1,1 +1,5 @@
-<p>editar-alimentacion works!</p>
+<h2>Editar Alimentación</h2>
+
+<app-formulario-alimentacion *ngIf="modelo" [modelo]="modelo" (OnSubmit)="guardarCambios($event)"></app-formulario-alimentacion>
+
+<mat-spinner *ngIf="!modelo"></mat-spinner>

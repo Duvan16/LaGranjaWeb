@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { alimentacionCreacionDTO } from '../alimentacion';
+import { alimentacionCreacionDTO, alimentacionDTO } from '../alimentacion';
 
 @Component({
   selector: 'app-formulario-alimentacion',
@@ -13,13 +13,13 @@ export class FormularioAlimentacionComponent implements OnInit {
   form!: FormGroup;
 
   @Input()
-  errores: string[] = [];
+  modelo?: alimentacionDTO;
 
   @Input()
-  modelo: alimentacionCreacionDTO = { descripcion: '', dosis: 0 };
+  errores: string[] = [];
 
   @Output()
-  onSubmit: EventEmitter<alimentacionCreacionDTO> = new EventEmitter<alimentacionCreacionDTO>();
+  OnSubmit: EventEmitter<alimentacionCreacionDTO> = new EventEmitter<alimentacionCreacionDTO>();
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -42,8 +42,8 @@ export class FormularioAlimentacionComponent implements OnInit {
     }
   }
 
-  guardarCambios() {
-    this.onSubmit.emit(this.form.value);
+  onSubmit() {
+    this.OnSubmit.emit(this.form.value);
   }
 
   obtenerErrorCampoDescripcion() {
