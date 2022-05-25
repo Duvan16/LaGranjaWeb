@@ -31,7 +31,6 @@ export class EditarAlimentacionComponent implements OnInit {
   }
 
   guardarCambios(alimentacion: alimentacionCreacionDTO) {
-    console.log('guardar');
     if (this.modelo) {
       this.alimentacionService.editar(this.modelo.id, alimentacion).subscribe(
         () => {

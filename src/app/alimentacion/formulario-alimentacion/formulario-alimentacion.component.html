@@ -3,18 +3,18 @@
 <form (submit)="onSubmit()" [formGroup]="form">
     <mat-form-field appearance="outline">
         <mat-label>Descripción*</mat-label>
-        <input formControlName="descripcion" matInput />
+        <input formControlName="descripcion" matInput autocomplete="off" />
         <mat-error *ngIf="form.invalid">{{ obtenerErrorCampoDescripcion() }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
         <mat-label>Dosis*</mat-label>
-        <input formControlName="dosis" matInput type="number" />
+        <input formControlName="dosis" matInput type="number" autocomplete="off" />
         <mat-error *ngIf="form.invalid">{{ obtenerErrorCampoDosis() }}</mat-error>
     </mat-form-field>
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">
       Guardar Cambios
     </button>
-        <a mat-stroked-button routerLink="/generos"> Cancelar </a>
+        <a mat-stroked-button routerLink="/alimentacion"> Cancelar </a>
     </div>
 </form>

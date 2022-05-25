@@ -18,6 +18,14 @@ import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-
 import { MenuComponent } from './menu/menu/menu.component';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 import { AutorizadoComponent } from './Seguridad/autorizado/autorizado.component';
+import { CrearRazaComponent } from './razas/crear-raza/crear-raza.component';
+import { EditarRazaComponent } from './razas/editar-raza/editar-raza.component';
+import { FormularioRazaComponent } from './razas/formulario-raza/formulario-raza.component';
+import { IndiceRazaComponent } from './razas/indice-raza/indice-raza.component';
+import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
+import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
+import { FormularioClienteComponent } from './clientes/formulario-cliente/formulario-cliente.component';
+import { IndiceClienteComponent } from './clientes/indice-cliente/indice-cliente.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +39,14 @@ import { AutorizadoComponent } from './Seguridad/autorizado/autorizado.component
     MenuComponent,
     AutorizadoComponent,
     LandingPageComponent,
+    CrearRazaComponent,
+    EditarRazaComponent,
+    FormularioRazaComponent,
+    IndiceRazaComponent,
+    CrearClienteComponent,
+    EditarClienteComponent,
+    FormularioClienteComponent,
+    IndiceClienteComponent,
   ],
   imports: [
     BrowserModule,

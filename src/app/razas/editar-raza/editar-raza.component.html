@@ -1,0 +1,5 @@
+<h2>Editar Raza</h2>
+
+<app-formulario-raza *ngIf="modelo" [modelo]="modelo" (OnSubmit)="guardarCambios($event)"></app-formulario-raza>
+
+<mat-spinner *ngIf="!modelo"></mat-spinner>
