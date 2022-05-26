@@ -1,0 +1,5 @@
+<h2>Editar Porcino</h2>
+
+<app-formulario-porcinos *ngIf="modelo" [modelo]="modelo" (OnSubmit)="guardarCambios($event)"></app-formulario-porcinos>
+
+<mat-spinner *ngIf="!modelo"></mat-spinner>

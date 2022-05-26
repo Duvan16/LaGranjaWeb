@@ -46,3 +46,14 @@ export function formatearFecha(date: Date) {
 
   return `${year}-${month}-${day}`;
 }
+
+export function calculateAge(date: any): number {
+  date = new Date(date);
+  if (date) {
+    var timeDiff = Math.abs(Date.now() - date);
+    return Math.floor(timeDiff / (1000 * 3600 * 24) / 365); //Años
+    //return Math.floor(timeDiff / (1000 * 3600 * 24)); //Dias
+  } else {
+    return 0;
+  }
+}

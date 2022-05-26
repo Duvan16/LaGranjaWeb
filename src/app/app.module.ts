@@ -26,6 +26,10 @@ import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.co
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
 import { FormularioClienteComponent } from './clientes/formulario-cliente/formulario-cliente.component';
 import { IndiceClienteComponent } from './clientes/indice-cliente/indice-cliente.component';
+import { IndicePorcinosComponent } from './porcinos/indice-porcinos/indice-porcinos.component';
+import { CrearPorcinosComponent } from './porcinos/crear-porcinos/crear-porcinos.component';
+import { EditarPorcinosComponent } from './porcinos/editar-porcinos/editar-porcinos.component';
+import { FormularioPorcinosComponent } from './porcinos/formulario-porcinos/formulario-porcinos.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { IndiceClienteComponent } from './clientes/indice-cliente/indice-cliente
     EditarClienteComponent,
     FormularioClienteComponent,
     IndiceClienteComponent,
+    IndicePorcinosComponent,
+    CrearPorcinosComponent,
+    EditarPorcinosComponent,
+    FormularioPorcinosComponent,
   ],
   imports: [
     BrowserModule,

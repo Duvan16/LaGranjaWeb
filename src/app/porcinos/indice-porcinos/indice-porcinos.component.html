@@ -1,0 +1,51 @@
+<h2>Porcinos</h2>
+
+<button mat-flat-button color="primary" routerLink="/porcinos/crear">
+  Crear nuevo
+</button>
+
+<app-listado-generico [listado]="porcino">
+    <ng-container contenido>
+        <table #table mat-table [dataSource]="porcino" class="mat-elevation-z8 tabla-indice">
+            <ng-container matColumnDef="identificacion">
+                <th mat-header-cell *matHeaderCellDef>Identificaión</th>
+                <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+            </ng-container>
+            <ng-container matColumnDef="raza">
+                <th mat-header-cell *matHeaderCellDef>Raza</th>
+                <td mat-cell *matCellDef="let element">{{ element.raza.nombre }}</td>
+            </ng-container>
+            <ng-container matColumnDef="edad">
+                <th mat-header-cell *matHeaderCellDef>Edad</th>
+                <td mat-cell *matCellDef="let element">{{ calcularEdadPorcino(element.fechaNacimiento) }}</td>
+            </ng-container>
+            <ng-container matColumnDef="peso">
+                <th mat-header-cell *matHeaderCellDef>Peso</th>
+                <td mat-cell *matCellDef="let element">{{ element.peso }}</td>
+            </ng-container>
+            <ng-container matColumnDef="alimentacion">
+                <th mat-header-cell *matHeaderCellDef>Alimentación</th>
+                <td mat-cell *matCellDef="let element">{{ element.alimentacion.descripcion }}</td>
+            </ng-container>
+            <ng-container matColumnDef="cliente">
+                <th mat-header-cell *matHeaderCellDef>Cliente</th>
+                <td mat-cell *matCellDef="let element">{{ element.cliente.nombres }} {{element.cliente.apellidos}}</td>
+            </ng-container>
+            <ng-container matColumnDef="acciones">
+                <th mat-header-cell *matHeaderCellDef>Acciones</th>
+                <td mat-cell *matCellDef="let element">
+                    <a routerLink="/porcinos/editar/{{ element.id }}" mat-flat-button color="primary">Editar</a>
+                    <button mat-flat-button color="warn" [swal]="{title: 'Confirmación',
+          text: '¿Está seguro que desea borrar el registro?',
+          showCancelButton: true}" (confirm)="borrar(element.id)">Borrar</button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="columnasAMostrar"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnasAMostrar"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons [length]="cantidadTotalRegistros" [pageSize]="cantidadRegistrosAMostrar" class="mat-elevation-z8" (page)="actualizarPaginacion($event)">
+
+        </mat-paginator>
+
+    </ng-container>
+</app-listado-generico>

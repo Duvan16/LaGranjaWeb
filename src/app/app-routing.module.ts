@@ -7,6 +7,9 @@ import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.co
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
 import { IndiceClienteComponent } from './clientes/indice-cliente/indice-cliente.component';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
+import { CrearPorcinosComponent } from './porcinos/crear-porcinos/crear-porcinos.component';
+import { EditarPorcinosComponent } from './porcinos/editar-porcinos/editar-porcinos.component';
+import { IndicePorcinosComponent } from './porcinos/indice-porcinos/indice-porcinos.component';
 import { CrearRazaComponent } from './razas/crear-raza/crear-raza.component';
 import { EditarRazaComponent } from './razas/editar-raza/editar-raza.component';
 import { IndiceRazaComponent } from './razas/indice-raza/indice-raza.component';
@@ -51,6 +54,18 @@ const routes: Routes = [
   {
     path: 'clientes/editar/:id',
     component: EditarClienteComponent,
+  },
+  {
+    path: 'porcinos',
+    component: IndicePorcinosComponent,
+  },
+  {
+    path: 'porcinos/crear',
+    component: CrearPorcinosComponent,
+  },
+  {
+    path: 'porcinos/editar/:id',
+    component: EditarPorcinosComponent,
   },
   { path: '**', redirectTo: '' },
 ];
