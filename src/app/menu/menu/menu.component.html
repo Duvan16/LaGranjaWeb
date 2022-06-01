@@ -8,22 +8,22 @@
         <a mat-button routerLink="porcinos/reporte">
             <mat-icon>search</mat-icon>Reporte Porcinos</a>
     </div>
-    <!-- <app-autorizado [rol]="'admin'"> -->
-    <ng-container autorizado>
-        <div>
-            <a mat-button routerLink="alimentacion">Alimentación</a>
-        </div>
-        <div>
-            <a mat-button routerLink="razas">Razas</a>
-        </div>
-        <div>
-            <a mat-button routerLink="clientes">Clientes</a>
-        </div>
-        <div>
-            <a mat-button routerLink="porcinos">Porcinos</a>
-        </div>
-    </ng-container>
-    <!-- </app-autorizado> -->
+    <app-autorizado [rol]="'admin'">
+        <ng-container autorizado>
+            <div>
+                <a mat-button routerLink="alimentacion">Alimentación</a>
+            </div>
+            <div>
+                <a mat-button routerLink="razas">Razas</a>
+            </div>
+            <div>
+                <a mat-button routerLink="clientes">Clientes</a>
+            </div>
+            <div>
+                <a mat-button routerLink="porcinos">Porcinos</a>
+            </div>
+        </ng-container>
+    </app-autorizado>
     <div class="espacio"></div>
     <app-autorizado>
         <ng-container autorizado>

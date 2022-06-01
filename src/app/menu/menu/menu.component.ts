@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SeguridadService } from 'src/app/Seguridad/seguridad.service';
+import { SeguridadService } from 'src/app/seguridad/seguridad.service';
 
 @Component({
   selector: 'app-menu',
