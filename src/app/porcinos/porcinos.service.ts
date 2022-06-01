@@ -40,6 +40,13 @@ export class PorcinosService {
     return this.http.get<porcinoDTO[]>(`${this.apiURL}/todos`);
   }
 
+  public filtrar(valores: any): Observable<any> {
+    const params = new HttpParams({ fromObject: valores });
+    return this.http.get<porcinoDTO[]>(`${this.apiURL}/filtrar`, {
+      params,
+      observe: 'response',
+    });
+  }
   public editar(id: number, porcino: porcinoCreacionDTO) {
     return this.http.put(`${this.apiURL}/${id}`, porcino);
   }

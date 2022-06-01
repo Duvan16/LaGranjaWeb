@@ -30,6 +30,7 @@ import { IndicePorcinosComponent } from './porcinos/indice-porcinos/indice-porci
 import { CrearPorcinosComponent } from './porcinos/crear-porcinos/crear-porcinos.component';
 import { EditarPorcinosComponent } from './porcinos/editar-porcinos/editar-porcinos.component';
 import { FormularioPorcinosComponent } from './porcinos/formulario-porcinos/formulario-porcinos.component';
+import { FiltroPorcinosComponent } from './porcinos/filtro-porcinos/filtro-porcinos.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { FormularioPorcinosComponent } from './porcinos/formulario-porcinos/form
     CrearPorcinosComponent,
     EditarPorcinosComponent,
     FormularioPorcinosComponent,
+    FiltroPorcinosComponent,
   ],
   imports: [
     BrowserModule,

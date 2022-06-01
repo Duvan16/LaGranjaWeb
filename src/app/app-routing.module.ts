@@ -9,13 +9,14 @@ import { IndiceClienteComponent } from './clientes/indice-cliente/indice-cliente
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 import { CrearPorcinosComponent } from './porcinos/crear-porcinos/crear-porcinos.component';
 import { EditarPorcinosComponent } from './porcinos/editar-porcinos/editar-porcinos.component';
+import { FiltroPorcinosComponent } from './porcinos/filtro-porcinos/filtro-porcinos.component';
 import { IndicePorcinosComponent } from './porcinos/indice-porcinos/indice-porcinos.component';
 import { CrearRazaComponent } from './razas/crear-raza/crear-raza.component';
 import { EditarRazaComponent } from './razas/editar-raza/editar-raza.component';
 import { IndiceRazaComponent } from './razas/indice-raza/indice-raza.component';
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: FiltroPorcinosComponent },
   {
     path: 'alimentacion',
     component: IndiceAlimentacionComponent,
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'porcinos/editar/:id',
     component: EditarPorcinosComponent,
+  },
+  {
+    path: 'porcinos/reporte',
+    component: FiltroPorcinosComponent,
   },
   { path: '**', redirectTo: '' },
 ];
